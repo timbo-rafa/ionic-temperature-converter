@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Converter
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Convert</ion-label>
+      <ion-input type="number" [(ngModel)]="value"
+        placeholder="Insert temperature..."></ion-input>
+    </ion-item>
+    <ion-item>
+      <p>from...</p>
+      <button ion-button [outline]='!selectedFrom["Celsius"]'    (click)='setFrom("Celsius")'>Celsius</button>
+      <button ion-button [outline]='!selectedFrom["Kelvin"]'     (click)='setFrom("Kelvin")'>Kelvin</button>
+      <button ion-button [outline]='!selectedFrom["Fahrenheit"]' (click)='setFrom("Fahrenheit")'>Fahrenheit</button>
+    </ion-item>
+    <ion-item>
+      <p>to...</p>
+      <button ion-button [outline]='!selectedTo["Celsius"]'      (click)='setTo("Celsius")'>Celsius</button>
+      <button ion-button [outline]='!selectedTo["Kelvin"]'       (click)='setTo("Kelvin")'>Kelvin</button>
+      <button ion-button [outline]='!selectedTo["Fahrenheit"]'   (click)='setTo("Fahrenheit")'>Fahrenheit</button>
+    </ion-item>
+    <p class="pad16">Result:</p>
+    <h2 class="pad16"
+    temperature-converter [from]="from" [to]="to" [value]="value"
+      (result)="updateResult($event)">
+      <!-- truncate to 2min Integer digits
+          0 min fractional digits
+          2 max fractional digits -->
+      {{ result | number:'2.0-2'}}
+    </h2>
+  </ion-list>
+</ion-content>
