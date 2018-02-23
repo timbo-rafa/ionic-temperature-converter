@@ -55,4 +55,9 @@ export class ConverterPage {
     console.log('updateResult:', event)
     this.result = event
   }
+
+  swipe(event) {
+    console.log("Swipe!");
+    this.result = 0
+  }
 }

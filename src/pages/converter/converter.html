@@ -26,7 +26,7 @@
       <button ion-button [outline]='!selectedTo["Fahrenheit"]'   (click)='setTo("Fahrenheit")'>Fahrenheit</button>
     </ion-item>
     <p class="pad16">Result:</p>
-    <h2 class="pad16"
+    <h2 class="pad16" (swipe)="swipe($event)"
       temperature-converter [from]="from" [to]="to" [value]="value"
       (result)="updateResult($event)">
       <!-- truncate to 2min Integer digits
