@@ -1,5 +1,5 @@
 {
-  "name": "lab1",
+  "name": "Temperature Converter",
   "app_id": "3ab7132a",
   "type": "ionic-angular",
   "integrations": {
