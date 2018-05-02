@@ -9,3 +9,5 @@ cd platforms/android/app/build/outputs/apk/release
 rm temperature-converter.apk
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ../../../../../../../../keystore/temperature-converter-release-key.keystore app-release-unsigned.apk temperature-converter
 $ANDROID_HOME/build-tools/27.0.3/zipalign -v 4 app-release-unsigned.apk temperature-converter.apk
+cd ../../../../../../../
+cp platforms/android/app/build/outputs/apk/release/temperature-converter.apk android-release/
