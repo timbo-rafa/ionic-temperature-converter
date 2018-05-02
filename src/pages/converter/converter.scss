@@ -3,4 +3,31 @@ page-converter {
     padding-left: 16px;
   }
 
+  .pad16r {
+    padding-right: 16px;
+  }
+
+  button.button.pad2p {
+    margin-left : 2% !important;
+    margin-right: 2% !important;
+  }
+
+  button.button {
+    min-width: 30px !important;
+    width: 30% !important;
+    padding-top: 2% !important;
+    padding-bottom: 2% !important;
+    font-size: 100% !important;
+    //height: 80% !important;
+  }
+
+  /*
+  ion-label.label {
+    font-size: 100% !important;
+  }
+  */
+
+  input.text-input {
+    font-size: 35px;
+  }
 }
