@@ -17,7 +17,7 @@ page-converter {
     width: 30% !important;
     padding-top: 2% !important;
     padding-bottom: 2% !important;
-    font-size: 100% !important;
+
     //height: 80% !important;
   }
 
@@ -29,5 +29,25 @@ page-converter {
 
   input.text-input {
     font-size: 35px;
+  }
+
+  @media only screen and (min-width: 600px) {
+    button.button {
+      font-size: 100% !important;
+    }
+
+    input.text-input {
+      font-size: 50px;
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    button.button {
+      font-size: 150% !important;
+    }
+
+    h1#result {
+      font-size: 50px;
+    }
   }
 }
